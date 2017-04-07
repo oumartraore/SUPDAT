@@ -23,13 +23,11 @@ EQUIPES
 -------------------
 
 NOM      | PRENOM  		| IDBooster
--------- | ---
+-------- | ------------ |-----------
 TRAORE   | Oumar   		| 165366
 BOYER    | Clement 		| 159913
-BOMO     | NGABA Xavier | 216113
- -
- -
-  - 
+BOMO     | NGABA Xavier | 216113  
+
 
 > **Rôle:**
 
