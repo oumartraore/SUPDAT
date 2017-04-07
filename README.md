@@ -12,7 +12,7 @@ Mini projet permettant de manipuler nos gros fichiers volumineux dans un environ
 
 > **Note:**
 
-> - **StackEdit** Nous avons deux parties pour ce projet.
+> - **IMPORTANR** Le projet se compose de 2 parties distincts.
 > - Blabla partie I.
 > - Blabla partie II.
 
