@@ -40,13 +40,35 @@ BOMO     | NGABA Xavier | 216113
 ----------
 
 
+PREREQUIS
+-------------
+
+Vous devez avoir ces prérequis
+
+- ```vagrant```  https://www.vagrantup.com/
+- ```virtualbox``` https://www.virtualbox.org/
+- ```Memoire RAM``` 1024 MB
+- ```Memoire Physique```20 GB
+- ```http://localhost:50070``` Interface du NameNode
+- ```http://localhost:50090``` Interface du JobTracker
+
+
+
+
+----------
+
+
 INSTALLATION
 -------------
+Executer ces commandes depuis votre terminal
 
 - ```vagrant up```  Demarrer la VM
 - ```vagrant ssh``` Connexion à la VM
 - ```start-all.sh``` Lancement de Hadoop en mode single node
 - ```cd /vagrant && pig.sh```Lancement de la démo du projet
 
+> **IMPORTANR:**
+
+> - A l'attention du correcteur, il n'est pas nécessaire d'exécuter l'environnement, vous pouvez immédiatement consulter le résultat attendu dans le dossier source "src" présent à la racine.
 
 Fin du Prof of concept du projet 5DAT.
