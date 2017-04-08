@@ -9,12 +9,10 @@ dpkg-reconfigure locales
 
 # PREREQUIS DE BASE
 
-sudo add-apt-repository ppa:openjdk-r/ppa -y
+#sudo add-apt-repository ppa:openjdk-r/ppa -y
 sudo apt-get update
-sudo aptitude install openjdk-7-jre
-sudo update-alternatives --config java
-
-sudo apt-get install --yes vim
+#sudo apt-get install --yes openjdk-7-jre # Fail à l'initialisation du script (Peu être le problème vient du stdin)
+sudo apt-get install --yes vim # L'option --yes permet de valider le prompt à l'installation pour automatiser le script
 sudo apt-get install --yes ssh
 sudo apt-get install --yes rsync
 sudo apt-get install --yes build-essential
@@ -39,14 +37,16 @@ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 #exit
 
 ## Path pour l'environnement JAVA, (L'utilisateur importe peu pour le POC)
-echo "export JAVA_HOME=\$(readlink –f /usr/bin/java | sed \"s:bin/java ::\")" >> /etc/profile
-echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
+#echo "export JAVA_HOME=\$(readlink -f /usr/bin/java | sed \"s:bin/java::\")"
+sudo echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> /etc/profile
+sudo echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
 
 ## Path pour l'environnement Hadoop (Bien sure /etc/profile devrait suffire, pourquoi ?)
-echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /etc/profile
-echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /etc/profile
-echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /etc/profile
+sudo echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /etc/profile
+sudo echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /etc/profile
+sudo echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /etc/profile
 
+# Normalement pas necessaire (Ci-dessous), si je l'ai mis dans /etc/profile
 echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /home/vagrant/.profile
 echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /home/vagrant/.profile
 echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /home/vagrant/.profile
