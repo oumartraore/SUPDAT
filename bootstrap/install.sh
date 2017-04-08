@@ -1,11 +1,13 @@
 # Resolution du probleme stdin - Sans trop comprendre pourquoi ? ----
 # lien vers la page : http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory
 
+# J'ai pas compris ce block - mais ça permet d'installer les packets
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 locale-gen en_US.UTF-8
 dpkg-reconfigure locales
+# Fin du blick potentiellement dangereu
 
 # PREREQUIS DE BASE
 
@@ -13,6 +15,7 @@ dpkg-reconfigure locales
 sudo apt-get update
 #sudo apt-get install --yes openjdk-7-jre # Fail à l'initialisation du script (Peu être le problème vient du stdin)
 sudo apt-get install --yes vim # L'option --yes permet de valider le prompt à l'installation pour automatiser le script
+sudo apt-get install --yes python-software-properties
 sudo apt-get install --yes ssh
 sudo apt-get install --yes rsync
 sudo apt-get install --yes build-essential
@@ -22,12 +25,20 @@ sudo apt-get install --yes build-essential
 ## Mise en place du Framework dans /usr/local
 cd /usr/local
 cp -Rf /vagrant/liondoop .
+cp -Rf /vagrant/lionpig .
 
 cd /usr/bin
 ln -s /usr/local/liondoop/bin/ liondoop
+ln -s /usr/local/lionpig/bin/ lionpig
 
 cd /usr/sbin
 ln -s /usr/local/liondoop/sbin/ liondoop
+
+# Edition de lien pour monter les fichiers de configuration de hadoop dans /etc
+#cd /etc
+#cp -Rf /vagrant/liondoop/conf liondoop
+#ln -s /usr/local/liondoop/sbin/ liondoop -- A reserver à plus tard
+
 
 ## Generation de la key ssh -> Pour permettre à localhost de se connecter en ssh
 cd ~
@@ -41,7 +52,9 @@ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 sudo echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> /etc/profile
 sudo echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
 
-## Path pour l'environnement Hadoop (Bien sure /etc/profile devrait suffire, pourquoi ?)
+#NB : Le choix de JAVA_HOME --> Standard JAVA & compatible avec PIG
+
+## Path pour l'environnement Hadoop (Bien sure /etc/profile devrait suffire, pourquoi ? -> c'est pas moi qui est crée cette boxe, je la paramère juste)
 sudo echo "export HADOOP_HOME=/usr/local/liondoop" >> /etc/profile
 sudo echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /etc/profile
 sudo echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /etc/profile
@@ -55,8 +68,13 @@ echo "export HADOOP_HOME=/usr/local/liondoop" >> /home/vagrant/.bashrc
 echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /home/vagrant/.bashrc
 echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /home/vagrant/.bashrc
 
-#NB : Le choix de HADOOP_HOME --> est pour forcer PIG à choisir ma version de Hadoop - POC sur une version précise de Hadoop
+# Mise en place du path pour pig
+sudo echo "export PATH=/usr/local/lionpig/bin/:$PATH" >> /etc/profile
+sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /etc/profile
+sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.profile
+sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.bashrc
 
+#NB : Le choix de HADOOP_HOME --> est pour forcer PIG à choisir ma version de Hadoop - POC sur une version précise de Hadoop
 
 # Violation des droits pour permettre à un utilisation d'exécuter le POC
 sudo chmod -Rf 777 /usr/local/liondoop
