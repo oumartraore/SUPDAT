@@ -79,6 +79,6 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 
-  config.vm.provision :shell, path: 'bootstrap/install.sh' 
+  config.vm.provision :shell, path: 'lionroar/roar.sh' 
   
 end
