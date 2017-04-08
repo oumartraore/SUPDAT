@@ -2,11 +2,11 @@
 # lien vers la page : http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory
 
 # J'ai pas compris ce block - mais ça permet d'installer les packets
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-locale-gen en_US.UTF-8
-dpkg-reconfigure locales
+sudo echo "export LANGUAGE=en_US.UTF-8" >> /etc/profile
+sudo echo "export LANG=en_US.UTF-8" >> /etc/profile
+sudo echo "export LC_ALL=en_US.UTF-8" >> /etc/profile
+sudo echo "locale-gen en_US.UTF-8" >> /etc/profile
+sudo echo "dpkg-reconfigure locales" >> /etc/profile
 # Fin du blick potentiellement dangereu
 
 # PREREQUIS DE BASE
@@ -44,8 +44,9 @@ ln -s /usr/local/liondoop/sbin/ liondoop
 cd ~
 ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
 cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
-#ssh localhost
-#exit
+ssh localhost
+echo "TEST DE CONNEXION AVEC SSH REUSSION - TRAORE OUMAR"
+exit
 
 ## Path pour l'environnement JAVA, (L'utilisateur importe peu pour le POC)
 #echo "export JAVA_HOME=\$(readlink -f /usr/bin/java | sed \"s:bin/java::\")"
@@ -71,10 +72,15 @@ echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /home/vagrant/.bashrc
 # Mise en place du path pour pig
 sudo echo "export PATH=/usr/local/lionpig/bin/:$PATH" >> /etc/profile
 sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /etc/profile
-sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.profile
-sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.bashrc
+echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.profile # NB : Des commandes sont lancés en sudo d'autres pas, selon l'utilisateur à qui appartient le truc
+echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.bashrc
 
 #NB : Le choix de HADOOP_HOME --> est pour forcer PIG à choisir ma version de Hadoop - POC sur une version précise de Hadoop
 
 # Violation des droits pour permettre à un utilisation d'exécuter le POC
 sudo chmod -Rf 777 /usr/local/liondoop
+
+# A ce niveau Hadoop est installer nous allons vous formattez le namenode
+hadoop namenode -format
+
+
