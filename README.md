@@ -61,7 +61,7 @@ Executer ces commandes depuis votre terminal
 
 - ```vagrant up```  Demarrer la VM
 - ```vagrant ssh``` Connexion à la VM --> Machine Guest (Vous êtes sur la machine Guest à ce niveau)
-- ```start-dfs.sh``` Lancement des deamons Hadoop & Mapreduce en mode single node, pour cette version (Suffisant pour manipuler PIG, dans ce POC)
+- ```start-dfs.sh``` Lancement des deamons HDFS & Mapreduce en mode single node, pour cette version (Suffisant pour manipuler PIG, dans ce POC)
 
 
 ----------
