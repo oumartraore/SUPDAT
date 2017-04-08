@@ -7,7 +7,7 @@
 # you're doing.
 
 $MEMORY = "1024"
-$NAME = "TRAOREBOYERGABA"
+$NAME = "Liondoop"
 
 Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
@@ -47,6 +47,7 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder "./src", "/vagrant"
+  config.vm.synced_folder "./liondoop", "/liondoop"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -79,6 +80,6 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 
-  config.vm.provision :shell, path: 'install/script.sh' 
+  config.vm.provision :shell, path: 'bootstrap/install.sh' 
   
 end
