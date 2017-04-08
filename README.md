@@ -1,10 +1,12 @@
 SUPDAT - MINI PROJET 5DAT
 ===================
-Ce projet à été généré en utilisant Vagrant. Afin de fournir un environnement Hadoop disponible au correcteur, lui permettant d'exécuter nos scripts PIG.
+Ce projet à été généré en utilisant Vagrant. Afin de fournir un environnement Hadoop disponible au correcteur, lui permettant d'exécuter nos scripts PIG. Le but aussi est de maintenir par la suite une sandbox de hadoop (TRAORE Oumar)
 
 > **Version Logiciel:**
-> - Devian 8 Jessie 64 bits
+> - Devian 8 Jessie 64 bits **Guest**
 > - Hadoop 1.2.1
+> - OSX EL CAPITAIN **Host** (Des problèmes peuvent survenir sur d'autres plateformes, Attention)
+> - Python : Pas besoin de faire du stream ...
 
 ----------
 
@@ -46,8 +48,8 @@ PREREQUIS
 
 Vous devez avoir ces prérequis
 
-- ```vagrant```  https://www.vagrantup.com/
-- ```virtualbox``` https://www.virtualbox.org/
+- ```vagrant```  Téléchargeable depuis https://www.vagrantup.com/
+- ```virtualbox``` Téléchargeable depuis https://www.virtualbox.org/
 - ```Memoire RAM``` 1024 MB
 - ```Memoire Physique```20 GB
 
@@ -62,7 +64,7 @@ Executer ces commandes depuis votre terminal
 - ```vagrant up```  Demarrer la VM
 - ```vagrant ssh``` Connexion à la VM --> Machine Guest (Vous êtes sur la machine Guest à ce niveau)
 - ```sudo su```  Connexion en tant que superutilisateur 
-- ``` apt-get install --yes openjdk-7-jre```  L'installation de packet (Difficulté de gerer l'installation du packet JAVA dans le bootstrap - Cependant le path est créer au démarrage de la VM, nécessaire pour hadoop) 
+- ``` apt-get install --yes openjdk-7-jre```  installation de packet jdk (j'ai rencontré des difficultés pour gerer l'installation du packet JAVA dans le bootstrap - Cependant le path est créer au démarrage de la VM, nécessaire pour hadoop - Plus tard si j'ai du temps je trouve une solution pour ça) 
 - ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC)
 > **IMPORTANR:** Vous devez installer cette version de java proposé, pour éviter tout bug.
 
