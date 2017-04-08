@@ -30,11 +30,9 @@ BOMO     | NGABA Xavier | 216113
 
 
 > **Rôle:**
-
-> - **TRAORE Oumar** Installation de l'infrastructure Hadoop + PIG.
+> - **TRAORE Oumar** Installation de l'infrastructure Hadoop, Gestion du projet.
 > - **BOYER Clement** Partie I.
 > - **BOMO NGABA Xavier** Partie II.
-
 
 
 ----------
@@ -49,10 +47,6 @@ Vous devez avoir ces prérequis
 - ```virtualbox``` https://www.virtualbox.org/
 - ```Memoire RAM``` 1024 MB
 - ```Memoire Physique```20 GB
-- ```http://localhost:50070``` Interface du NameNode
-- ```http://localhost:50090``` Interface du JobTracker
-
-
 
 
 ----------
@@ -63,12 +57,32 @@ INSTALLATION
 Executer ces commandes depuis votre terminal
 
 - ```vagrant up```  Demarrer la VM
-- ```vagrant ssh``` Connexion à la VM
+- ```vagrant ssh``` Connexion à la VM --> Machine Guest (Vous êtes sur la machine Guest à ce niveau)
+- ```start-all.sh``` Lancement de tous les deamons Hadoop en mode single node (Suffisant pour manipuler PIG, dans ce POC)
+
+
+----------
+
+
+DEPLOIEMENT (TEST || DEMO || ...)
+-------------
+
+Depuis la machine **Hôte**, sur votre Navigateur
+
+- ```http://localhost:50070``` Interface du NameNode
+- ```http://localhost:50090``` Interface du JobTracker
+
+Depuis la machine **Guest** sur votre terminer, executer
+
 - ```start-all.sh``` Lancement de Hadoop en mode single node
-- ```cd /vagrant && pig.sh```Lancement de la démo du projet
+- ```cd /vagrant``` Pour accerder au repertoire partager, contenant les sources à réaliser
+- ```cd PartieI/scriptX.sh``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie I
+- ```cd PartieII/scriptX.sh``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
+
 
 > **IMPORTANR:**
 
-> - A l'attention du correcteur, il n'est pas nécessaire d'exécuter l'environnement, vous pouvez immédiatement consulter le résultat attendu dans le dossier source "src" présent à la racine.
+> - A l'attention du **Correcteur**, il n'est pas nécessaire d'exécuter l'environnement, vous pouvez immédiatement consulter le résultat attendu dans le dossier source "src" présent à la racine de l'archive.
+
 
 Fin du Prof of concept du projet 5DAT.
