@@ -4,7 +4,7 @@ Ce projet à été généré en utilisant Vagrant. Afin de fournir un environnem
 
 > **Version Logiciel:**
 > - Devian 8 Jessie
-> - Hadoop 2.7.3
+> - Hadoop 1.2.1
 
 ----------
 
