@@ -3,7 +3,7 @@ SUPDAT - MINI PROJET 5DAT
 Ce projet à été généré en utilisant Vagrant. Afin de fournir un environnement Hadoop disponible au correcteur, lui permettant d'exécuter nos scripts PIG. Le but aussi est de maintenir par la suite une sandbox de hadoop (TRAORE Oumar)
 
 > **Version Logiciel:**
-> - Devian 8 Jessie 64 bits **Guest**
+> - Devian 7 Wheezy 64 bits **Guest** (Wheezy like Lil wayne)
 > - Hadoop 1.2.1
 > - OSX EL CAPITAIN **Host** (Des problèmes peuvent survenir sur d'autres plateformes, Attention)
 > - Python : Pas besoin de faire du stream ...
