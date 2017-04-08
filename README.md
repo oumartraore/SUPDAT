@@ -61,7 +61,7 @@ Executer ces commandes depuis votre terminal
 
 - ```vagrant up```  Demarrer la VM
 - ```vagrant ssh``` Connexion à la VM --> Machine Guest (Vous êtes sur la machine Guest à ce niveau)
-- ```start-all.sh``` Lancement de tous les deamons Hadoop en mode single node (Suffisant pour manipuler PIG, dans ce POC)
+- ```start-dfs.sh``` Lancement des deamons Hadoop & Mapreduce en mode single node, pour cette version (Suffisant pour manipuler PIG, dans ce POC)
 
 
 ----------
@@ -76,8 +76,7 @@ Depuis la machine **Hôte**, sur votre Navigateur
 - ```http://localhost:50090``` Interface du JobTracker
 
 Depuis la machine **Guest** sur votre terminer, executer
-
-- ```start-all.sh``` Lancement de Hadoop en mode single node
+ 
 - ```cd /vagrant``` Pour accerder au repertoire partager, contenant les sources à réaliser
 - ```cd PartieI/scriptX.sh``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie I
 - ```cd PartieII/scriptX.sh``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
