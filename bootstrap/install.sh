@@ -9,3 +9,6 @@ apt-get install rsync # Necessaire pour Hadoop
 
 # INSTALLATION de Hadoop sur la machine Guest, depuis notre configuration
 
+#export JAVA_HOME=/usr/java/latest
+
+#export HADOOP_PREFIX=/usr/local/hadoop
