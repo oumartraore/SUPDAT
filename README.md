@@ -73,7 +73,7 @@ DEPLOIEMENT (TEST || DEMO || ...)
 Depuis la machine **Hôte**, sur votre Navigateur
 
 - ```http://localhost:50070``` Interface du NameNode
-- ```http://localhost:50090``` Interface du JobTracker
+- ```http://localhost:50030``` Interface du JobTracker
 
 Depuis la machine **Guest** sur votre terminer, executer
  
