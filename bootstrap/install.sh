@@ -14,29 +14,47 @@ sudo apt-get update
 sudo apt-get -y install openjdk-8-jdk
 sudo update-alternatives --config java
 
-sudo apt-get install -y vim
-sudo apt-get install -y ssh
-sudo apt-get install -y rsync
-sudo apt-get install -y build-essential
+sudo apt-get install --yes vim
+sudo apt-get install --yes ssh
+sudo apt-get install --yes rsync
+sudo apt-get install --yes build-essential
 
 # INSTALLATION de Hadoop sur la machine Guest, depuis notre configuration
 
+## Mise en place du Framework dans /usr/local
+cd /usr/local
+cp -Rf /vagrant/liondoop .
+
+cd /usr/bin
+ln -s /usr/local/liondoop/bin/ liondoop
+
+cd /usr/sbin
+ln -s /usr/local/liondoop/sbin/ liondoop
+
 ## Generation de la key ssh -> Pour permettre à localhost de se connecter en ssh
+cd ~
 ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
 cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 #ssh localhost
 #exit
 
 ## Path pour l'environnement JAVA, (L'utilisateur importe peu pour le POC)
-echo "export JAVA_HOME=/usr/java/latest" >> /etc/profile
-echo "export PATH=$JAVA_HOME/bin:$PATH" >> /etc/profile
+echo "export JAVA_HOME=/usr/lib/jvm/openjdk-r" >> /etc/profile
+echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
 
 ## Path pour l'environnement Hadoop
 echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /etc/profile
-echo "export PATH=$PATH:$HADOOP_INSTALL/bin" >> /etc/profile
-echo "export PATH=$PATH:$HADOOP_INSTALL/sbin" >> /etc/profile
+echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /etc/profile
+echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /etc/profile
 
-## Mise en place du Framework dans /usr/local
-cp -Rf /vagrant/liondoop /usr/local/
+echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /home/vagrant/.profile
+echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /home/vagrant/.profile
+echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /home/vagrant/.profile
+
+echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /home/vagrant/.bashrc
+echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /home/vagrant/.bashrc
+echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /home/vagrant/.bashrc
+
 
 # Violation des droits pour permettre à un utilisation d'exécuter le POC
+sudo chmod -Rf 777 /usr/local/liondoop
