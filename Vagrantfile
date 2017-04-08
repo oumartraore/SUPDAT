@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
   # Réaliser par TRAORE Oumar - PORT 50070 pour Namemode
   config.vm.network "forwarded_port", guest: 80, host: 50070
   # PORT 50090 pour le JobTracker
-  config.vm.network "forwarded_port", guest: 80, host: 50070
+  config.vm.network "forwarded_port", guest: 80, host: 50030
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -47,7 +47,6 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder "./src", "/vagrant"
-  config.vm.synced_folder "./liondoop", "/liondoop"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
