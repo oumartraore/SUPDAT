@@ -63,8 +63,7 @@ Executer ces commandes depuis votre terminal
 
 - ```vagrant up```  Demarrer la VM
 - ```vagrant ssh``` Connexion à la VM --> Machine Guest (Vous êtes sur la machine Guest à ce niveau)
-- ```sudo su```  Connexion en tant que superutilisateur 
-- ``` apt-get install --yes openjdk-7-jre```  installation de packet jdk (j'ai rencontré des difficultés pour gerer l'installation du packet JAVA dans le bootstrap - Cependant le path est créer au démarrage de la VM, nécessaire pour hadoop - Plus tard si j'ai du temps je trouve une solution pour ça) 
+- ```sudo su```  Connexion en tant que superutilisateur  
 - ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC)
 > **IMPORTANR:** Vous devez installer cette version de java proposé, pour éviter tout bug.
 
