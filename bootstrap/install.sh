@@ -11,7 +11,7 @@ dpkg-reconfigure locales
 
 sudo add-apt-repository ppa:openjdk-r/ppa -y
 sudo apt-get update
-sudo apt-get -y install openjdk-8-jdk
+sudo aptitude install openjdk-7-jre
 sudo update-alternatives --config java
 
 sudo apt-get install --yes vim
@@ -39,10 +39,10 @@ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 #exit
 
 ## Path pour l'environnement JAVA, (L'utilisateur importe peu pour le POC)
-echo "export JAVA_HOME=/usr/lib/jvm/openjdk-r" >> /etc/profile
+echo "export JAVA_HOME=\$(readlink –f /usr/bin/java | sed \"s:bin/java ::\")" >> /etc/profile
 echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
 
-## Path pour l'environnement Hadoop
+## Path pour l'environnement Hadoop (Bien sure /etc/profile devrait suffire, pourquoi ?)
 echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /etc/profile
 echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /etc/profile
 echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /etc/profile
