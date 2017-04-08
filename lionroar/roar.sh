@@ -13,7 +13,7 @@ sudo echo "dpkg-reconfigure locales" >> /etc/profile
 
 #sudo add-apt-repository ppa:openjdk-r/ppa -y
 sudo apt-get update
-#sudo apt-get install --yes openjdk-7-jre # Fail à l'initialisation du script (Peu être le problème vient du stdin)
+sudo apt-get install --yes openjdk-7-jre # Fail à l'initialisation du script (Peu être le problème vient du stdin)
 sudo apt-get install --yes vim # L'option --yes permet de valider le prompt à l'installation pour automatiser le script
 sudo apt-get install --yes python-software-properties
 sudo apt-get install --yes ssh
@@ -44,7 +44,7 @@ ln -s /usr/local/liondoop/sbin/ liondoop
 cd ~
 ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
 cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
-ssh localhost
+#ssh localhost
 echo "TEST DE CONNEXION AVEC SSH REUSSION - TRAORE OUMAR"
 exit
 
@@ -61,19 +61,19 @@ sudo echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /etc/profile
 sudo echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /etc/profile
 
 # Normalement pas necessaire (Ci-dessous), si je l'ai mis dans /etc/profile
-echo "export HADOOP_HOME=/usr/local/liondoop" >> /home/vagrant/.profile
-echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /home/vagrant/.profile
-echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /home/vagrant/.profile
+sudo echo "export HADOOP_HOME=/usr/local/liondoop" >> /home/vagrant/.profile
+sudo echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /home/vagrant/.profile
+sudo echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /home/vagrant/.profile
 
-echo "export HADOOP_HOME=/usr/local/liondoop" >> /home/vagrant/.bashrc
-echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /home/vagrant/.bashrc
-echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /home/vagrant/.bashrc
+sudo echo "export HADOOP_HOME=/usr/local/liondoop" >> /home/vagrant/.bashrc
+sudo echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /home/vagrant/.bashrc
+sudo echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /home/vagrant/.bashrc
 
 # Mise en place du path pour pig
 sudo echo "export PATH=/usr/local/lionpig/bin/:$PATH" >> /etc/profile
 sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /etc/profile
-echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.profile # NB : Des commandes sont lancés en sudo d'autres pas, selon l'utilisateur à qui appartient le truc
-echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.bashrc
+sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.profile # NB : Des commandes sont lancés en sudo d'autres pas, selon l'utilisateur à qui appartient le truc
+sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.bashrc
 
 #NB : Le choix de HADOOP_HOME --> est pour forcer PIG à choisir ma version de Hadoop - POC sur une version précise de Hadoop
 
@@ -81,6 +81,6 @@ echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.bash
 sudo chmod -Rf 777 /usr/local/liondoop
 
 # A ce niveau Hadoop est installer nous allons vous formattez le namenode
-hadoop namenode -format
+#hadoop namenode -format
 
 
