@@ -61,7 +61,7 @@ Executer ces commandes depuis votre terminal
 
 - ```vagrant up```  Demarrer la VM
 - ```vagrant ssh``` Connexion à la VM --> Machine Guest (Vous êtes sur la machine Guest à ce niveau)
-- ```start-dfs.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour manipuler PIG, dans ce POC)
+- ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC)
 
 
 ----------
