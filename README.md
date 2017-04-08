@@ -2,9 +2,9 @@ SUPDAT - MINI PROJET 5DAT
 ===================
 Ce projet à été généré en utilisant Vagrant. Afin de fournir un environnement Hadoop disponible au correcteur, lui permettant d'exécuter nos scripts PIG.
 
-> **Version Logicielle:**
-> - Devian version 2.7.3
-> - Hadoop version 2.7.3
+> **Version Logiciel:**
+> - Devian 6 Jessie
+> - Hadoop 2.7.3
 
 ----------
 
