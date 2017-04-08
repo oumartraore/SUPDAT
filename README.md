@@ -6,6 +6,7 @@ Ce projet à été généré en utilisant Vagrant. Afin de fournir un environnem
 > - Devian 8 Jessie 64 bits **Guest**
 > - Hadoop 1.2.1
 > - OSX EL CAPITAIN **Host** (Des problèmes peuvent survenir sur d'autres plateformes, Attention)
+> - Python : Pas besoin de faire du stream ...
 
 ----------
 
