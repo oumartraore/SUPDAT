@@ -45,8 +45,8 @@ cd ~
 ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
 cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 #ssh localhost
-echo "TEST DE CONNEXION AVEC SSH REUSSION - TRAORE OUMAR"
-exit
+#echo "TEST DE CONNEXION AVEC SSH REUSSION - TRAORE OUMAR"
+#exit
 
 ## Path pour l'environnement JAVA, (L'utilisateur importe peu pour le POC)
 #echo "export JAVA_HOME=\$(readlink -f /usr/bin/java | sed \"s:bin/java::\")"
