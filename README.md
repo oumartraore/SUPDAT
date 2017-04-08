@@ -16,7 +16,7 @@ Context
 
 Mini projet permettant de manipuler nos gros fichiers volumineux dans un environnement Hadoop, avec PIG.
 
-> **IMPORTANR:**
+> **IMPORTANT:**
 > - Le projet se compose de 2 parties distincts.
 > - Blabla partie I.
 > - Blabla partie II.
@@ -65,7 +65,6 @@ Executer ces commandes depuis votre terminal
 - ```vagrant ssh``` Connexion à la VM --> Machine Guest (Vous êtes sur la machine Guest à ce niveau)
 - ```sudo su```  Connexion en tant que superutilisateur  
 - ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC)
-> **IMPORTANR:** Vous devez installer cette version de java proposé, pour éviter tout bug.
 
 
 ----------
@@ -86,7 +85,7 @@ Depuis la machine **Guest** sur votre terminer, executer
 - ```cd PartieII/scriptX.sh``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
 
 
-> **IMPORTANR:**
+> **IMPORTANT:**
 
 > - A l'attention du **Correcteur**, il n'est pas nécessaire d'exécuter l'environnement, vous pouvez immédiatement consulter le résultat attendu dans le dossier source "src" présent à la racine de l'archive.
 
