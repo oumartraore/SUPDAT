@@ -1,0 +1,60 @@
+MISSING @SINCE TAG: org.apache.pig.builtin.HiveUDAF Class
+NO DOC BLOCK: org.apache.pig.builtin.HiveUDAF.Final Class
+NO DOC BLOCK: org.apache.pig.builtin.HiveUDAF.Initial Class
+NO DOC BLOCK: org.apache.pig.builtin.HiveUDAF.Intermediate Class
+MISSING @SINCE TAG: org.apache.pig.builtin.HiveUDF Class
+MISSING @SINCE TAG: org.apache.pig.builtin.HiveUDTF Class
+NO DOC BLOCK: org.apache.pig.impl.builtin.IsFirstReduceOfKey Class
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.udf.IsFirstReduceOfKeyTez Class
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.runtime.PigGraceShuffleVertexManager Class
+NO DOC BLOCK: org.apache.pig.builtin.RoundRobinPartitioner Class
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.optimizer.TezEstimatedParallelismClearer Class
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.util.TezRuntimeUtil Class
+NO DOC BLOCK: org.apache.pig.tools.pigstats.tez.TezScriptState.TezDAGScriptInfo Class
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.UDFEndOfAllInputNeededVisitor Class
+NO DOC BLOCK: org.apache.pig.data.UnlimitedNullTuple Class
+MISSING @SINCE TAG: org.apache.pig.impl.plan.DependencyOrderWalker Constructor (org.apache.pig.impl.plan.OperatorPlan, boolean)
+NO DOC BLOCK: org.apache.pig.builtin.PluckTuple Constructor (java.lang.String, java.lang.String)
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder Method avoidContainerReuseIfInputSplitInDisk()
+MISSING @SINCE TAG: org.apache.pig.backend.hadoop.executionengine.tez.plan.optimizer.UnionOptimizer Method connectPredecessorsToVertexGroups(org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator, org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator, org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhysicalPlan, org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator[], org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator[])
+MISSING @SINCE TAG: org.apache.pig.backend.hadoop.hbase.HBaseStorage Method createDelete(java.lang.Object, byte, long)
+NO DOC BLOCK: org.apache.pig.impl.plan.OperatorKey Method fromString(java.lang.String)
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperPlan Method getCredentials()
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperPlan Method getGrandParentsForGraceParallelism(org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperPlan, org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator)
+MISSING @SINCE TAG: org.apache.pig.backend.hadoop.executionengine.tez.runtime.ObjectCache Method getObjectRegistry()
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator Method getParallelismFactor()
+MISSING @SINCE TAG: org.apache.pig.impl.util.avro.AvroTupleWrapper Method getPigObject(java.lang.Object)
+NO DOC BLOCK: org.apache.pig.tools.pigstats.OutputStats Method getRecords()
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.HExecutionEngine Method getS3Conf()
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator.VertexGroupInfo Method getSFile()
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator Method getStores()
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator Method getUnionMembers()
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.optimizer.UnionOptimizer Method isOptimizable(org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator)
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator Method isUseGraceParallelism()
+NO DOC BLOCK: org.apache.pig.EvalFunc Method needEndOfAllInputProcessing()
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POUserFunc Method needEndOfAllInputProcessing()
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach Method needEndOfAllInputProcessing()
+NO DOC BLOCK: org.apache.pig.impl.util.Utils Method parseConstant(java.lang.String)
+NO DOC BLOCK: org.apache.pig.parser.DryRunGruntParser Method processDeclare(java.lang.String, java.lang.String)
+NO DOC BLOCK: org.apache.pig.tools.grunt.GruntParser Method processDeclare(java.lang.String, java.lang.String)
+NO DOC BLOCK: org.apache.pig.parser.DryRunGruntParser Method processDefault(java.lang.String, java.lang.String)
+NO DOC BLOCK: org.apache.pig.tools.grunt.GruntParser Method processDefault(java.lang.String, java.lang.String)
+NO DOC BLOCK: org.apache.pig.tools.pigstats.OutputStats Method setBytes(long)
+NO DOC BLOCK: org.apache.pig.impl.util.Utils Method setDefaultTimeZone(org.apache.hadoop.conf.Configuration)
+NO DOC BLOCK: org.apache.pig.EvalFunc Method setEndOfAllInput(boolean)
+NO DOC BLOCK: org.apache.pig.tools.pigstats.OutputStats Method setRecords(long)
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator.VertexGroupInfo Method setSFile(org.apache.pig.impl.io.FileSpec)
+NO DOC BLOCK: org.apache.pig.tools.pigstats.OutputStats Method setSuccessful(boolean)
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.tez.plan.TezOperator Method setUseGraceParallelism(boolean)
+MISSING @SINCE TAG: org.apache.pig.backend.hadoop.executionengine.tez.util.MRToTezHelper Method updateLocalResourcesForInputSplits(org.apache.hadoop.fs.FileSystem, org.apache.tez.mapreduce.hadoop.InputSplitInfo, java.util.Map)
+MISSING @SINCE TAG: org.apache.pig.backend.hadoop.executionengine.tez.util.MRToTezHelper Method writeInputSplitInfoToDisk(org.apache.tez.mapreduce.hadoop.InputSplitInfoMem, org.apache.hadoop.fs.Path, org.apache.hadoop.mapred.JobConf, org.apache.hadoop.fs.FileSystem)
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach Field endOfAllInputProcessed
+NO DOC BLOCK: org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach Field endOfAllInputProcessing
+MISSING @SINCE TAG: org.apache.pig.PigConfiguration Field PIG_COMPRESS_INPUT_SPLITS
+NO DOC BLOCK: org.apache.pig.PigConfiguration Field PIG_COMPRESS_INPUT_SPLITS_DEFAULT
+MISSING @SINCE TAG: org.apache.pig.PigConfiguration Field PIG_DATETIME_DEFAULT_TIMEZONE
+MISSING @SINCE TAG: org.apache.pig.PigConfiguration Field PIG_SKEWEDJOIN_REDUCE_MEM
+MISSING @SINCE TAG: org.apache.pig.PigConfiguration Field PIG_TEZ_GRACE_PARALLELISM
+MISSING @SINCE TAG: org.apache.pig.PigConfiguration Field PIG_TEZ_INPUT_SPLITS_MEM_THRESHOLD
+NO DOC BLOCK: org.apache.pig.PigConfiguration Field PIG_TEZ_INPUT_SPLITS_MEM_THRESHOLD_DEFAULT
+MISSING @SINCE TAG: org.apache.pig.PigConfiguration Field PIG_USER_CACHE_REPLICATION

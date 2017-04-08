@@ -42,18 +42,20 @@ sudo echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> /etc/prof
 sudo echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
 
 ## Path pour l'environnement Hadoop (Bien sure /etc/profile devrait suffire, pourquoi ?)
-sudo echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /etc/profile
-sudo echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /etc/profile
-sudo echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /etc/profile
+sudo echo "export HADOOP_HOME=/usr/local/liondoop" >> /etc/profile
+sudo echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /etc/profile
+sudo echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /etc/profile
 
 # Normalement pas necessaire (Ci-dessous), si je l'ai mis dans /etc/profile
-echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /home/vagrant/.profile
-echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /home/vagrant/.profile
-echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /home/vagrant/.profile
+echo "export HADOOP_HOME=/usr/local/liondoop" >> /home/vagrant/.profile
+echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /home/vagrant/.profile
+echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /home/vagrant/.profile
 
-echo "export HADOOP_INSTALL=/usr/local/liondoop" >> /home/vagrant/.bashrc
-echo "export PATH=\$HADOOP_INSTALL/bin:\$PATH" >> /home/vagrant/.bashrc
-echo "export PATH=\$HADOOP_INSTALL/sbin:\$PATH" >> /home/vagrant/.bashrc
+echo "export HADOOP_HOME=/usr/local/liondoop" >> /home/vagrant/.bashrc
+echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /home/vagrant/.bashrc
+echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /home/vagrant/.bashrc
+
+#NB : Le choix de HADOOP_HOME --> est pour forcer PIG à choisir ma version de Hadoop - POC sur une version précise de Hadoop
 
 
 # Violation des droits pour permettre à un utilisation d'exécuter le POC
