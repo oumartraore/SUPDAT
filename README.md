@@ -5,10 +5,7 @@ Ce projet à été généré en utilisant Vagrant. Afin de fournir un environnem
 > **Version Logiciel:**
 > - Devian 8 Jessie 64 bits **Guest**
 > - Hadoop 1.2.1
-> - OSX EL CAPITAIN **Host**
-**Autres Host - Comptible sous certaine version - & bonne chance pour débugger si vous voulez autre chose**
-> - Windows 8.1 - Problème rencontre sur windows 10 - A revenir la dessus après.
-> - Debian ....
+> - OSX EL CAPITAIN **Host** (Des problèmes peuvent survenir sur d'autres plateformes, Attention)
 
 ----------
 
