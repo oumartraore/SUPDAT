@@ -86,8 +86,12 @@ Depuis la machine **Guest** sur votre terminer, executer
  
 - ```cd /vagrant``` Pour accerder au repertoire partager, contenant les sources à réaliser
 - ```hadoop fs -put liondata liondata``` Copiez les fichiers sur HDFS, dans un dossier liondata
-- ```pig PartieI/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie I
-- ```pig PartieII/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
+- ```pig -x mapreduce PartieI/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie I
+- ```pig -x mapreduce PartieII/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
+
+
+> **Avantage:**
+Tout le traitement est effectuer par PIG dans Hadoop & le paradigme Mapreduce, permettra d'acceler le calcul, les performances sont réellement visible sur un grand cluster.
 
 
 > **IMPORTANT:**
