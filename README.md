@@ -17,7 +17,7 @@ Context
 Mini projet permettant de manipuler nos gros fichiers volumineux dans un environnement Hadoop, avec PIG.
 
 > **IMPORTANT:**
-> - Le projet se compose de 2 parties distincts.
+> - Le projet se compose en 2 parties distincts.
 > - Blabla partie I.
 > - Blabla partie II.
 
