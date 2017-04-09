@@ -17,7 +17,7 @@ Context
 Mini projet permettant de manipuler nos gros fichiers volumineux dans un environnement Hadoop, avec PIG.
 
 > **IMPORTANT:**
-> - Le projet se compose de 2 parties distincts.
+> - Le projet se compose en 2 parties distincts.
 > - Blabla partie I.
 > - Blabla partie II.
 
@@ -63,8 +63,12 @@ Executer ces commandes depuis votre terminal
 
 - ```vagrant up```  Demarrer la VM
 - ```vagrant ssh``` Connexion à la VM --> Machine Guest (Vous êtes sur la machine Guest à ce niveau)
-- ```sudo su```  Connexion en tant que superutilisateur  
-- ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC)
+- ```ssh localost```  Mot de Passe "vagrant"
+- ```exit```  Quitter la session localhost
+- ```hadoop namenode -format```  Formater le namenode
+- ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC), Mot de Passe "vagrant". l'idée est de permettre à l'utilisateur de lancer & éteindre le demon à volonté, sans l'automatisation
+- ```pig```  Pour le lancer en intéractif & tester - pas besoin vue qu'on fournit des scripts
+
 
 
 ----------
@@ -81,8 +85,8 @@ Depuis la machine **Hôte**, sur votre Navigateur
 Depuis la machine **Guest** sur votre terminer, executer
  
 - ```cd /vagrant``` Pour accerder au repertoire partager, contenant les sources à réaliser
-- ```cd PartieI/scriptX.sh``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie I
-- ```cd PartieII/scriptX.sh``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
+- ```pig PartieI/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie I
+- ```pig PartieII/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
 
 
 > **IMPORTANT:**
