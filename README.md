@@ -86,8 +86,8 @@ Depuis la machine **Guest** sur votre terminer, executer
  
 - ```cd /vagrant``` Pour accerder au repertoire partager, contenant les sources à réaliser
 - ```hadoop fs -put liondata liondata``` Copiez les fichiers sur HDFS, dans un dossier liondata
-- ```pig -x mapreduce PartieI/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie I
-- ```pig -x mapreduce PartieII/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
+- ```pig -x mapreduce Partie-I/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie I
+- ```pig -x mapreduce Partie-II/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
 
 
 > **Avantage:**
