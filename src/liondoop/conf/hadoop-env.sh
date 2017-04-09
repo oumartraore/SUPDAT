@@ -7,7 +7,7 @@
 
 # The java implementation to use.  Required.
 # export JAVA_HOME=/usr/lib/j2sdk1.5-sun
-export JAVA_HOME=$JAVA_HOME
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/ #Cette ligne est de TRAORE Oumar
 
 # Extra Java CLASSPATH elements.  Optional.
 # export HADOOP_CLASSPATH=

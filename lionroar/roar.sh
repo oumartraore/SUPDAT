@@ -53,9 +53,15 @@ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 sudo echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> /etc/profile
 sudo echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
 
+sudo echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> /home/vagrant/.profile
+sudo echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /home/vagrant/.profile
+
+sudo echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> /home/vagrant/.bashrc
+sudo echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /home/vagrant/.bashrc
+
 #NB : Le choix de JAVA_HOME --> Standard JAVA & compatible avec PIG
 
-## Path pour l'environnement Hadoop (Bien sure /etc/profile devrait suffire, pourquoi ? -> c'est pas moi qui est crée cette boxe, je la paramère juste)
+## Path pour l'environnement Hadoop (Bien sure /etc/profile devrait suffire, pourquoi ? -> c'est pas moi qui est crée cette boxe, je la paramère juste) - donc l'utilisateur je peux le créer avec un script, mais celui par défaut, j'ai la flemme de regarder, comment il utilise bash
 sudo echo "export HADOOP_HOME=/usr/local/liondoop" >> /etc/profile
 sudo echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /etc/profile
 sudo echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /etc/profile
@@ -70,7 +76,7 @@ sudo echo "export PATH=\$HADOOP_HOME/bin:\$PATH" >> /home/vagrant/.bashrc
 sudo echo "export PATH=\$HADOOP_HOME/sbin:\$PATH" >> /home/vagrant/.bashrc
 
 # Mise en place du path pour pig
-sudo echo "export PATH=/usr/local/lionpig/bin/:$PATH" >> /etc/profile
+sudo echo "export PATH=/usr/local/lionpig/bin/:\$PATH" >> /etc/profile
 sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /etc/profile
 sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.profile # NB : Des commandes sont lancés en sudo d'autres pas, selon l'utilisateur à qui appartient le truc
 sudo echo "export PIG_CONF_DIR=/usr/local/conf/pig.properties" >> /home/vagrant/.bashrc
