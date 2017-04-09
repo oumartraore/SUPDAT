@@ -66,7 +66,7 @@ Executer ces commandes depuis votre terminal
 - ```ssh localost```  Mot de Passe "vagrant"
 - ```exit```  Quitter la session localhost
 - ```hadoop namenode -format```  Formater le namenode
-- ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC)
+- ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC), Mot de Passe "vagrant". l'idée est de permettre à l'utilisateur de lancer & éteindre le demon à volonté, sans l'automatisation
 - ```pig```  Pour le lancer en intéractif & tester - pas besoin vue qu'on fournit des scripts
 
 
