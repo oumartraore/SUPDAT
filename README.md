@@ -67,7 +67,7 @@ Executer ces commandes depuis votre terminal
 - ```exit```  Quitter la session localhost
 - ```hadoop namenode -format```  Formater le namenode
 - ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC), Mot de Passe "vagrant". l'idée est de permettre à l'utilisateur de lancer & éteindre le demon à volonté, sans l'automatisation
-- ```pig```  Pour le lancer en intéractif & tester - pas besoin vue qu'on fournit des scripts
+- ```pig -x mapreduce```  Pour le lancer pig en mode Mapreduce, pour tester (Demande dans le sujet)
 
 
 
@@ -85,6 +85,7 @@ Depuis la machine **Hôte**, sur votre Navigateur
 Depuis la machine **Guest** sur votre terminer, executer
  
 - ```cd /vagrant``` Pour accerder au repertoire partager, contenant les sources à réaliser
+- ```hadoop fs -put liondata liondata``` Copiez les fichiers sur HDFS, dans un dossier liondata
 - ```pig PartieI/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie I
 - ```pig PartieII/scriptX.pig``` X: [1..5] Repeter cette action, pour chaque script à tester de la Partie II
 
