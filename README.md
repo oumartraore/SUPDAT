@@ -63,8 +63,6 @@ Executer ces commandes depuis votre terminal
 
 - ```vagrant up```  Demarrer la VM
 - ```vagrant ssh``` Connexion à la VM --> Machine Guest (Vous êtes sur la machine Guest à ce niveau)
-- ```ssh localost```  Mot de Passe "vagrant" (A partir de là j'arrive pas à automoiser la suite)
-- ```exit```  Quitter la session localhost
 - ```hadoop namenode -format```  Formater le namenode
 - ```start-all.sh``` Lancement des deamons HDFS & Mapreduce en mode Pseudo Distribué, sur un noeud (Suffisant pour PIG, dans ce POC), Mot de Passe "vagrant". l'idée est de permettre à l'utilisateur de lancer & éteindre le demon à volonté, sans l'automatisation
 - ```pig -x mapreduce```  Pour le lancer pig en mode Mapreduce, pour tester (Demande dans le sujet)
