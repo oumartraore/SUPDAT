@@ -19,4 +19,4 @@ voitures = FOREACH voitures GENERATE
 
 -- Stockage du résultat dans un fichier Qui serra réutiliser plus tard
 
-STORE voitures INTO 'liste_voitures.txt’ using PigStorage(';');
+STORE voitures INTO 'lionoutput/liste_voitures.txt’ using PigStorage(';');
