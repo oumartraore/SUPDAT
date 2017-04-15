@@ -7,7 +7,6 @@
 
 # The java implementation to use.  Required.
 # export JAVA_HOME=/usr/lib/j2sdk1.5-sun
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/ #Cette ligne est de TRAORE Oumar
 
 # Extra Java CLASSPATH elements.  Optional.
 # export HADOOP_CLASSPATH=
@@ -56,3 +55,6 @@ export HADOOP_JOBTRACKER_OPTS="-Dcom.sun.management.jmxremote $HADOOP_JOBTRACKER
 
 # The scheduling priority for daemon processes.  See 'man nice'.
 # export HADOOP_NICENESS=10
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/ #Cette ligne est de TRAORE Oumar
+#Communication sous iPV4
+export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
