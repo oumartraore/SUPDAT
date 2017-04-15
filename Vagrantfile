@@ -29,9 +29,9 @@ Vagrant.configure("2") do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   
   # Réaliser par TRAORE Oumar - PORT 50070 pour Namemode
-  config.vm.network "forwarded_port", guest: 80, host: 50070
+  # config.vm.network "forwarded_port", guest: 80, host: 50070
   # PORT 50090 pour le JobTracker
-  config.vm.network "forwarded_port", guest: 80, host: 50030
+  # config.vm.network "forwarded_port", guest: 80, host: 50030
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
