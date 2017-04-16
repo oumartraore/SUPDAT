@@ -1,2 +1,0 @@
-WARN    (2015-06-01) 11:45.04:817   [core.language.java] (Unknown-URI) Unknown-Thread/JavaLanguage: Attempted to retrieve directory listing of non-directory /Users/daijy/Library/Java/Extensions
-WARN    (2015-06-01) 11:45.04:821   [core.language.java] (Unknown-URI) Unknown-Thread/JavaLanguage: Attempted to retrieve directory listing of non-directory /Network/Library/Java/Extensions
