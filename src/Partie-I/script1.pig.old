@@ -1,0 +1,25 @@
+-- Recuperation de tous les champs du fichiers csv
+
+voitures = LOAD 'mars-2014-complete.csv' USING PigStorage(';')
+as
+(
+	marque: chararray, model_dossier: chararray, model_commercial: chararray, designation_commercial: chararray, cnit: chararray, 
+	tvv: chararray, type_carburant: chararray, hybrid: chararray, puissance_administrative: int, puissance_maximal: float,
+	type_boite_nb_rapp: chararray, consomation_urbaine: float, e: float, conso_extra_urbaine: float, conso_mixte: float, 
+	co2: int, co_typ_1: float, hc: float, nox: float, hcnox: float, ptcl: float, masse_ordre_marche_mini: int, masse_orda_max: int, 
+	champsv9: chararray, date_maj: chararray, carrosserie: chararray, gamme: chararray
+);
+
+-- Trie des elements qui nous interessent
+
+voitures = FOREACH voitures GENERATE 
+	marque, model_dossier, model_commercial, designation_commercial, type_carburant, hybrid, puissance_administrative, puissance_maximal, type_boite_nb_rapp, consomation_urbaine, conso_mixte, conso_extra_urbaine, co2, masse_ordre_marche_mini, carrosserie, gamme
+;
+
+-- Stockage du résultat dans un fichier Qui serra réutiliser plus tard
+
+
+STORE voitures INTO 'liste_voiture' USING PigStorage(';');
+
+
+-- DUMP voitures;
